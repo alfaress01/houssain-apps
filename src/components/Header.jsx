@@ -13,7 +13,6 @@ const Header = () => {
                 alt="Houssain Apps Logo" 
                 className="h-12 w-auto" 
               />
-              <span className="text-2xl font-bold text-indigo-600 dark:text-indigo-400">Houssain Apps</span>
             </Link>
           </div>
           <nav className="hidden md:flex space-x-8">
