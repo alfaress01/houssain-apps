@@ -9,7 +9,7 @@ const Footer = () => {
             <h2 className="text-xl font-bold">Houssain Apps</h2>
             <p className="text-gray-400 text-sm mt-1">جميع الحقوق محفوظة © {new Date().getFullYear()}</p>
           </div>
-          <div className="flex space-x-6 space-x-reverse">
+          <div className="flex gap-4">
             <a href="#" className="text-gray-400 hover:text-white transition-colors">
               <span className="sr-only">Facebook</span>
               <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
