@@ -5,7 +5,7 @@ const JibiPage = () => {
     <div className="min-h-screen bg-gradient-to-br from-[#667eea] to-[#764ba2] font-sans text-[#333] py-10" dir="rtl">
       <div className="max-w-6xl mx-auto px-5">
         <div className="text-center text-white mb-10">
-          <img src="/images/logo_jibi_app.png" alt="Jibi Logo" className="w-24 h-24 mx-auto mb-4 rounded-2xl shadow-lg" />
+          <img src={`${import.meta.env.BASE_URL}images/logo_jibi_app.png`} alt="Jibi Logo" className="w-24 h-24 mx-auto mb-4 rounded-2xl shadow-lg" />
           <h1 className="text-5xl font-bold mb-2 drop-shadow-md">Jibi Expense Tracker</h1>
           <p className="text-xl opacity-90">تطبيق إدارة المصروفات الذكي</p>
         </div>

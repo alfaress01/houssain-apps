@@ -9,7 +9,7 @@ function Home() {
       id: 1,
       title: "Jibi Expense Tracker",
       description: "تطبيق مجاني وسهل الاستخدام لإدارة مصروفاتك الشخصية بذكاء وفعالية.",
-      icon: <img src="/images/logo_jibi_app.png" alt="Jibi Logo" className="w-full h-full object-cover" />,
+      icon: <img src={`${import.meta.env.BASE_URL}images/logo_jibi_app.png`} alt="Jibi Logo" className="w-full h-full object-cover" />,
       link: "/jibi"
     },
     {
