@@ -6,7 +6,7 @@ import JibiPrivacy from './pages/JibiPrivacy';
 
 function App() {
   return (
-    <Router>
+    <Router basename="/houssain-apps">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/jibi" element={<JibiPage />} />
