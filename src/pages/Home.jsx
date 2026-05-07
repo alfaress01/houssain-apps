@@ -23,7 +23,7 @@ function Home() {
       id: 3,
       title: "تيسير",
       description: "أكثر من 50 أداة مجانية لتسهيل المهام اليومية والمهنية في مكان واحد.",
-      icon: "🧰",
+      icon: <img src={`${import.meta.env.BASE_URL}images/tayssir_logo.png`} alt="Tayssir Logo" className="w-full h-full object-cover" />,
       link: "/tayssir"
     },
     {
