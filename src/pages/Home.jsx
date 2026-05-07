@@ -16,7 +16,7 @@ function Home() {
       id: 2,
       title: "Takort",
       description: "منصة ذكية لتوقعات ومحاكاة كأس العالم 2026 بالذكاء الاصطناعي.",
-      icon: "🏆",
+      icon: <img src={`${import.meta.env.BASE_URL}images/takort_logo.png`} alt="Takort Logo" className="w-full h-full object-cover" />,
       link: "/takort"
     },
     {

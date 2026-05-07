@@ -43,8 +43,12 @@ const TakortPage = () => {
       <main className="flex-grow">
         <section className="bg-gradient-to-r from-emerald-600 to-blue-700 text-white py-16">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <div className="mx-auto mb-6 flex h-24 w-24 items-center justify-center rounded-3xl bg-white/15 text-5xl shadow-xl backdrop-blur-sm">
-              🏆
+            <div className="mx-auto mb-6 flex h-24 w-24 items-center justify-center rounded-3xl bg-white/15 shadow-xl backdrop-blur-sm overflow-hidden">
+              <img
+                src={`${import.meta.env.BASE_URL}images/takort_logo.png`}
+                alt="Takort Logo"
+                className="h-full w-full object-cover"
+              />
             </div>
             <h1 className="text-4xl md:text-6xl font-extrabold leading-tight mb-5">
               المنصة الذكية الأولى لتوقعات ومحاكاة كأس العالم 2026
