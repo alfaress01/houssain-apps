@@ -21,20 +21,27 @@ function Home() {
     },
     {
       id: 3,
+      title: "تيسير",
+      description: "أكثر من 50 أداة مجانية لتسهيل المهام اليومية والمهنية في مكان واحد.",
+      icon: "🧰",
+      link: "/tayssir"
+    },
+    {
+      id: 4,
       title: "مدير المهام",
       description: "نظم وقتك ومهامك بفعالية مع تطبيق إدارة المهام المتطور.",
       icon: "✅",
       link: "#"
     },
     {
-      id: 4,
+      id: 5,
       title: "حاسبة العملات",
       description: "تحويل سريع ودقيق بين العملات العالمية بأسعار لحظية.",
       icon: "💱",
       link: "#"
     },
     {
-      id: 5,
+      id: 6,
       title: "قارئ الأخبار",
       description: "تابع آخر الأخبار من مصادرك المفضلة في مكان واحد.",
       icon: "📰",
@@ -75,7 +82,7 @@ function Home() {
             <div className="w-24 h-1 bg-indigo-600 mx-auto rounded"></div>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-8">
             {apps.map((app) => (
               <AppCard 
                 key={app.id}
