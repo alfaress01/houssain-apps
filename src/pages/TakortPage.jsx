@@ -74,9 +74,9 @@ const TakortPage = () => {
       />
       <Header />
 
-      <main className="flex-grow">
-        <section className="bg-gradient-to-r from-emerald-600 to-blue-700 text-white py-16">
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <main className="flex-grow py-14">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <section className="bg-gradient-to-r from-emerald-600 to-blue-700 text-white rounded-3xl p-8 md:p-12 shadow-xl mb-10">
             <div className="mx-auto mb-6 flex h-24 w-24 items-center justify-center rounded-3xl bg-white/15 shadow-xl backdrop-blur-sm overflow-hidden">
               <img
                 src={`${import.meta.env.BASE_URL}images/takort_logo.png`}
@@ -84,18 +84,16 @@ const TakortPage = () => {
                 className="h-full w-full object-cover"
               />
             </div>
-            <h1 className="text-4xl md:text-6xl font-extrabold leading-tight mb-5">
+            <h1 className="text-4xl md:text-5xl font-extrabold leading-tight mb-5 text-center">
               المنصة الذكية الأولى لتوقعات ومحاكاة كأس العالم 2026
             </h1>
-            <p className="max-w-4xl mx-auto text-lg md:text-2xl text-blue-100 leading-relaxed">
+            <p className="max-w-4xl mx-auto text-lg md:text-xl text-blue-100 leading-relaxed text-center">
               تاكورت منصة تفاعلية حديثة تمنح عشاق كرة القدم تجربة مختلفة تجمع بين التحليل الذكي،
               المحاكاة، التحديات، والأخبار المتجددة في مكان واحد.
             </p>
-          </div>
-        </section>
+          </section>
 
-        <section className="py-14">
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <section>
             <div className="bg-white dark:bg-gray-800 rounded-3xl shadow-xl p-8 md:p-12 border border-gray-100 dark:border-gray-700 relative">
               <Link
                 to="/"
@@ -176,8 +174,8 @@ const TakortPage = () => {
                 </div>
               </div>
             </div>
-          </div>
-        </section>
+          </section>
+        </div>
       </main>
 
       <Footer />

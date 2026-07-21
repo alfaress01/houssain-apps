@@ -91,9 +91,9 @@ const TayssirPage = () => {
       />
       <Header />
 
-      <main className="flex-grow">
-        <section className="bg-gradient-to-r from-sky-600 via-blue-600 to-indigo-700 text-white py-16">
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <main className="flex-grow py-14">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <section className="bg-gradient-to-r from-sky-600 via-blue-600 to-indigo-700 text-white rounded-3xl p-8 md:p-12 shadow-xl mb-10">
             <div className="mx-auto mb-6 flex h-24 w-24 items-center justify-center overflow-hidden rounded-3xl bg-white/15 shadow-xl backdrop-blur-sm">
               <img
                 src={`${import.meta.env.BASE_URL}images/tayssir_logo.png`}
@@ -101,18 +101,16 @@ const TayssirPage = () => {
                 className="h-full w-full object-cover"
               />
             </div>
-            <h1 className="text-4xl md:text-6xl font-extrabold leading-tight mb-5">
+            <h1 className="text-4xl md:text-5xl font-extrabold leading-tight mb-5 text-center">
               منصة "تيسير": كنزك الشامل لأكثر من 50 أداة مجانية تسهل حياتك اليومية
             </h1>
-            <p className="max-w-4xl mx-auto text-lg md:text-2xl text-blue-100 leading-relaxed">
+            <p className="max-w-4xl mx-auto text-lg md:text-xl text-blue-100 leading-relaxed text-center">
               منصة عربية تجمع عشرات الأدوات المجانية المفيدة في مكان واحد، بدون تسجيل، وبدون
               تعقيدات، مع تجربة سريعة ومريحة على الهاتف والكمبيوتر.
             </p>
-          </div>
-        </section>
+          </section>
 
-        <section className="py-14">
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <section>
             <div className="bg-white dark:bg-gray-800 rounded-3xl shadow-xl p-8 md:p-12 border border-gray-100 dark:border-gray-700 relative">
               <Link
                 to="/"
@@ -211,8 +209,8 @@ const TayssirPage = () => {
                 </div>
               </div>
             </div>
-          </div>
-        </section>
+          </section>
+        </div>
       </main>
 
       <Footer />
