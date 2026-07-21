@@ -26,6 +26,13 @@ function Home() {
       description: "أكثر من 50 أداة مجانية لتسهيل المهام اليومية والمهنية في مكان واحد.",
       icon: <img src={`${import.meta.env.BASE_URL}images/tayssir_logo.png`} alt="Tayssir Logo" className="w-full h-full object-cover" />,
       link: "/tayssir"
+    },
+    {
+      id: 4,
+      title: "Shatranj Pro",
+      description: "منصة شطرنج عربية للعب مع الكمبيوتر، اللعب أونلاين، البطولات، ومختبر الشطرنج.",
+      icon: <img src={`${import.meta.env.BASE_URL}images/shatranj_logo.png`} alt="Shatranj Pro Logo" className="w-full h-full object-cover" />,
+      link: "/shatranj"
     }
   ];
 
@@ -34,7 +41,7 @@ function Home() {
     '@type': 'CollectionPage',
     name: 'معرض تطبيقات حسين',
     url: `${Seo.siteUrl}/`,
-    description: 'معرض عربي لعرض تطبيقات ومشاريع حسين مثل Jibi وTakort وتيسير مع صفحات تعريفية وروابط مباشرة.',
+    description: 'معرض عربي لعرض تطبيقات ومشاريع حسين مثل Jibi وTakort وتيسير وShatranj Pro مع صفحات تعريفية وروابط مباشرة.',
     inLanguage: 'ar',
     isPartOf: {
       '@type': 'WebSite',
@@ -58,13 +65,13 @@ function Home() {
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 flex flex-col font-sans" dir="rtl">
       <Seo
         title="معرض تطبيقات حسين | Houssain Apps"
-        description="اكتشف تطبيقات ومشاريع حسين الرقمية مثل Jibi لإدارة المصاريف، Takort لمحاكاة كأس العالم، وتيسير لأدوات مجانية مفيدة."
+        description="اكتشف تطبيقات ومشاريع حسين الرقمية مثل Jibi لإدارة المصاريف، Takort لمحاكاة كأس العالم، تيسير للأدوات المجانية، وShatranj Pro لعشاق الشطرنج."
         path="/"
         lang="ar"
         dir="rtl"
         image="/logo.png"
         type="website"
-        keywords="معرض تطبيقات حسين, Houssain Apps, Jibi, Takort, تيسير, تطبيقات عربية, أدوات مجانية"
+        keywords="معرض تطبيقات حسين, Houssain Apps, Jibi, Takort, تيسير, Shatranj Pro, تطبيقات عربية, أدوات مجانية, شطرنج"
         structuredData={structuredData}
       />
       <Header />

@@ -7,6 +7,7 @@ import TakortPage from './pages/TakortPage';
 import TayssirPage from './pages/TayssirPage';
 import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
+import ShatranjPage from './pages/ShatranjPage';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/jibi/privacy" element={<JibiPrivacy />} />
         <Route path="/takort" element={<TakortPage />} />
         <Route path="/tayssir" element={<TayssirPage />} />
+        <Route path="/shatranj" element={<ShatranjPage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/contact" element={<ContactPage />} />
       </Routes>
