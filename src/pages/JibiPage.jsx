@@ -28,8 +28,8 @@ const contentByLanguage = {
     highlight:
       '💡 تطبيق جيبي دليلك العملي لمعرفة أين تضيع أموالك، وبالتالي ستتمكن من تسيير مصاريفك بل والتوفير أيضا.',
     downloadTitle: 'حمل التطبيق الآن',
+    homeLabel: 'العودة إلى الصفحة الرئيسية',
     googlePlayLabel: '📱 Google Play Store',
-    appStoreLabel: '🍎 App Store',
     appInfoTitle: 'معلومات التطبيق',
     versionLabel: 'الإصدار',
     developerLabel: 'المطور',
@@ -65,8 +65,8 @@ const contentByLanguage = {
     highlight:
       '💡 Jibi is your practical guide to discovering where your money goes, helping you manage expenses better and save more.',
     downloadTitle: 'Download the App Now',
+    homeLabel: 'Back to Home',
     googlePlayLabel: '📱 Google Play Store',
-    appStoreLabel: '🍎 App Store',
     appInfoTitle: 'App Information',
     versionLabel: 'Version',
     developerLabel: 'Developer',
@@ -102,8 +102,8 @@ const contentByLanguage = {
     highlight:
       '💡 Jibi es tu guía práctica para descubrir a dónde se va tu dinero, para que puedas gestionar mejor tus gastos y ahorrar más.',
     downloadTitle: 'Descarga la aplicación ahora',
+    homeLabel: 'Volver a la página principal',
     googlePlayLabel: '📱 Google Play Store',
-    appStoreLabel: '🍎 App Store',
     appInfoTitle: 'Información de la aplicación',
     versionLabel: 'Versión',
     developerLabel: 'Desarrollador',
@@ -139,8 +139,8 @@ const contentByLanguage = {
     highlight:
       '💡 Jibi est votre guide pratique pour comprendre où va votre argent, afin de mieux gérer vos dépenses et d’épargner davantage.',
     downloadTitle: "Téléchargez l'application maintenant",
+    homeLabel: "Retour à l'accueil",
     googlePlayLabel: '📱 Google Play Store',
-    appStoreLabel: '🍎 App Store',
     appInfoTitle: "Informations sur l'application",
     versionLabel: 'Version',
     developerLabel: 'Développeur',
@@ -242,12 +242,12 @@ const JibiPage = ({ language = 'ar' }) => {
               >
                 {content.googlePlayLabel}
               </a>
-              <a
-                href="#"
-                className="inline-block bg-gradient-to-r from-[#667eea] to-[#764ba2] text-white px-8 py-4 rounded-full text-lg font-medium hover:-translate-y-1 transition-transform duration-300"
+              <Link
+                to="/"
+                className="inline-block bg-white text-[#667eea] px-8 py-4 rounded-full text-lg font-bold border border-[#667eea] hover:-translate-y-1 transition-transform duration-300"
               >
-                {content.appStoreLabel}
-              </a>
+                {content.homeLabel}
+              </Link>
             </div>
           </div>
 
