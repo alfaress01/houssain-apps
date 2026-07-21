@@ -8,7 +8,7 @@ import TayssirPage from './pages/TayssirPage';
 
 function App() {
   return (
-    <Router basename="/houssain-apps">
+    <Router>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/jibi" element={<JibiPage />} />
