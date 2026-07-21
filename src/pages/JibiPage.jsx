@@ -200,9 +200,21 @@ const JibiPage = ({ language = 'ar' }) => {
           <Link
             to="/"
             aria-label={content.homeLabel}
-            className="absolute top-5 left-5 inline-flex h-11 w-11 items-center justify-center rounded-full border border-[#667eea] text-[#667eea] hover:bg-[#667eea] hover:text-white transition-colors duration-300"
+            className="absolute top-5 left-5 inline-flex h-14 w-14 items-center justify-center rounded-full border-2 border-[#4f66f0] bg-white text-[#4f66f0] shadow-md hover:bg-[#4f66f0] hover:text-white transition-colors duration-300"
           >
-            ←
+            <svg
+              className="h-7 w-7"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2.8"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M15 18l-6-6 6-6" />
+              <path d="M9 12h10" />
+            </svg>
           </Link>
 
           <h2 className="text-center text-[#667eea] text-2xl font-bold mb-8">{content.pageTitle}</h2>
