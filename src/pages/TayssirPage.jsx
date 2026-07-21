@@ -1,6 +1,8 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import Seo from '../components/Seo';
 
 const sections = [
   {
@@ -55,10 +57,42 @@ const sections = [
 const TayssirPage = () => {
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 flex flex-col font-sans" dir="rtl">
+      <Seo
+        title="تيسير | أكثر من 50 أداة مجانية مفيدة"
+        description="تعرف على منصة تيسير العربية التي تجمع أكثر من 50 أداة مجانية للصور وPDF والمال والتحويلات والأدوات الإسلامية والصحية."
+        path="/tayssir"
+        lang="ar"
+        dir="rtl"
+        image="/images/tayssir_logo.png"
+        type="article"
+        keywords="تيسير, أدوات مجانية, PDF, تحويل الصور, حاسبة الراتب, أدوات إسلامية, أدوات عربية"
+        structuredData={{
+          '@context': 'https://schema.org',
+          '@type': 'Article',
+          headline: 'منصة تيسير: كنزك الشامل لأكثر من 50 أداة مجانية',
+          description:
+            'مقال تعريفي بمنصة تيسير العربية التي توفر عشرات الأدوات المجانية اليومية والمهنية والدينية في مكان واحد.',
+          inLanguage: 'ar',
+          url: `${Seo.siteUrl}/tayssir`,
+          image: `${Seo.siteUrl}/images/tayssir_logo.png`,
+          author: {
+            '@type': 'Person',
+            name: 'Houssain',
+          },
+          publisher: {
+            '@type': 'Organization',
+            name: 'Houssain Apps',
+            logo: {
+              '@type': 'ImageObject',
+              url: `${Seo.siteUrl}/logo.png`,
+            },
+          },
+        }}
+      />
       <Header />
 
       <main className="flex-grow">
-        <section className="bg-gradient-to-r from-amber-500 to-orange-600 text-white py-16">
+        <section className="bg-gradient-to-r from-sky-600 via-blue-600 to-indigo-700 text-white py-16">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <div className="mx-auto mb-6 flex h-24 w-24 items-center justify-center overflow-hidden rounded-3xl bg-white/15 shadow-xl backdrop-blur-sm">
               <img
@@ -70,7 +104,7 @@ const TayssirPage = () => {
             <h1 className="text-4xl md:text-6xl font-extrabold leading-tight mb-5">
               منصة "تيسير": كنزك الشامل لأكثر من 50 أداة مجانية تسهل حياتك اليومية
             </h1>
-            <p className="max-w-4xl mx-auto text-lg md:text-2xl text-orange-100 leading-relaxed">
+            <p className="max-w-4xl mx-auto text-lg md:text-2xl text-blue-100 leading-relaxed">
               منصة عربية تجمع عشرات الأدوات المجانية المفيدة في مكان واحد، بدون تسجيل، وبدون
               تعقيدات، مع تجربة سريعة ومريحة على الهاتف والكمبيوتر.
             </p>
@@ -79,7 +113,26 @@ const TayssirPage = () => {
 
         <section className="py-14">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="bg-white dark:bg-gray-800 rounded-3xl shadow-xl p-8 md:p-12 border border-gray-100 dark:border-gray-700">
+            <div className="bg-white dark:bg-gray-800 rounded-3xl shadow-xl p-8 md:p-12 border border-gray-100 dark:border-gray-700 relative">
+              <Link
+                to="/"
+                aria-label="العودة إلى الصفحة الرئيسية"
+                className="absolute top-5 left-5 inline-flex h-14 w-14 items-center justify-center rounded-full border-2 border-[#4f66f0] bg-white text-[#4f66f0] shadow-md transition-colors duration-300 hover:bg-[#4f66f0] hover:text-white"
+              >
+                <svg
+                  className="h-7 w-7 -translate-x-px"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2.8"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="M15 18l-6-6 6-6" />
+                  <path d="M9 12h10" />
+                </svg>
+              </Link>
               <div className="space-y-8 text-gray-700 dark:text-gray-200 leading-8 text-lg">
                 <div>
                   <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">ما هي منصة تيسير؟</h2>
@@ -107,7 +160,7 @@ const TayssirPage = () => {
                         className="rounded-2xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-900/40 p-6 shadow-sm"
                       >
                         <div className="flex items-center gap-4 mb-4">
-                          <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-orange-500 text-xs font-extrabold text-white">
+                          <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-blue-600 text-xs font-extrabold text-white">
                             {section.icon}
                           </div>
                           <h3 className="text-xl font-bold text-gray-900 dark:text-white">{section.title}</h3>
@@ -125,8 +178,8 @@ const TayssirPage = () => {
                   </div>
                 </div>
 
-                <div className="rounded-2xl bg-orange-50 dark:bg-orange-950/30 border border-orange-100 dark:border-orange-900 p-6">
-                  <h2 className="text-2xl font-bold text-orange-700 dark:text-orange-300 mb-4">لماذا ننصح باستخدام منصة تيسير؟</h2>
+                <div className="rounded-2xl bg-blue-50 dark:bg-blue-950/30 border border-blue-100 dark:border-blue-900 p-6">
+                  <h2 className="text-2xl font-bold text-blue-700 dark:text-blue-300 mb-4">لماذا ننصح باستخدام منصة تيسير؟</h2>
                   <ul className="space-y-3">
                     <li>مجاني 100% بدون خطط مدفوعة أو طلب بطاقة ائتمانية.</li>
                     <li>بدون تسجيل أو إنشاء حسابات جديدة.</li>

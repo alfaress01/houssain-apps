@@ -2,6 +2,7 @@ import React from 'react';
 import Header from '../components/Header';
 import AppCard from '../components/AppCard';
 import Footer from '../components/Footer';
+import Seo from '../components/Seo';
 
 function Home() {
   const apps = [
@@ -49,8 +50,44 @@ function Home() {
     }
   ];
 
+  const structuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    name: 'معرض تطبيقات حسين',
+    url: `${Seo.siteUrl}/`,
+    description: 'معرض عربي لعرض تطبيقات ومشاريع حسين مثل Jibi وTakort وتيسير مع صفحات تعريفية وروابط مباشرة.',
+    inLanguage: 'ar',
+    isPartOf: {
+      '@type': 'WebSite',
+      name: 'Houssain Apps',
+      url: `${Seo.siteUrl}/`,
+    },
+    mainEntity: {
+      '@type': 'ItemList',
+      itemListElement: apps
+        .filter((app) => app.link.startsWith('/'))
+        .map((app, index) => ({
+          '@type': 'ListItem',
+          position: index + 1,
+          name: app.title,
+          url: `${Seo.siteUrl}${app.link}`,
+        })),
+    },
+  };
+
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 flex flex-col font-sans" dir="rtl">
+      <Seo
+        title="معرض تطبيقات حسين | Houssain Apps"
+        description="اكتشف تطبيقات ومشاريع حسين الرقمية مثل Jibi لإدارة المصاريف، Takort لمحاكاة كأس العالم، وتيسير لأدوات مجانية مفيدة."
+        path="/"
+        lang="ar"
+        dir="rtl"
+        image="/logo.png"
+        type="website"
+        keywords="معرض تطبيقات حسين, Houssain Apps, Jibi, Takort, تيسير, تطبيقات عربية, أدوات مجانية"
+        structuredData={structuredData}
+      />
       <Header />
       
       <main className="flex-grow">

@@ -1,9 +1,13 @@
 import { Link } from 'react-router-dom';
+import Seo from '../components/Seo';
 
 const contentByLanguage = {
   ar: {
     dir: 'rtl',
     subtitle: 'تطبيق إدارة المصروفات الذكي',
+    seoTitle: 'تطبيق جيبي | إدارة المصروفات الشخصية بذكاء',
+    seoDescription:
+      'تعرّف على تطبيق جيبي لإدارة المصروفات الشخصية، تتبع الإنفاق اليومي، الإحصائيات، النسخ الاحتياطي، والتقارير بأربع لغات.',
     pageTitle: 'مرحباً بك في تطبيق Jibi',
     intro: 'تطبيق مجاني وسهل الاستخدام لإدارة مصروفاتك الشخصية بذكاء وفعالية',
     cards: [
@@ -41,6 +45,9 @@ const contentByLanguage = {
   en: {
     dir: 'ltr',
     subtitle: 'Smart Expense Management App',
+    seoTitle: 'Jibi App | Smart Personal Expense Tracker',
+    seoDescription:
+      'Discover Jibi, a personal expense tracker app with smart budgeting, detailed statistics, backups, PDF export, and multilingual support.',
     pageTitle: 'Welcome to Jibi App',
     intro: 'A free and easy-to-use app to manage your personal expenses smartly and efficiently',
     cards: [
@@ -78,6 +85,9 @@ const contentByLanguage = {
   es: {
     dir: 'ltr',
     subtitle: 'Aplicación inteligente para gestionar gastos',
+    seoTitle: 'Jibi App | Gestor Inteligente de Gastos Personales',
+    seoDescription:
+      'Descubre Jibi, una aplicación para gestionar gastos personales con estadísticas detalladas, copias de seguridad, exportación PDF y soporte multilingüe.',
     pageTitle: 'Bienvenido a la aplicación Jibi',
     intro: 'Una aplicación gratuita y fácil de usar para gestionar tus gastos personales de forma inteligente y eficaz',
     cards: [
@@ -115,6 +125,9 @@ const contentByLanguage = {
   fr: {
     dir: 'ltr',
     subtitle: 'Application intelligente de gestion des dépenses',
+    seoTitle: 'Jibi App | Gestion intelligente des dépenses personnelles',
+    seoDescription:
+      'Découvrez Jibi, une application de gestion des dépenses avec statistiques détaillées, sauvegarde, export PDF et support multilingue.',
     pageTitle: "Bienvenue dans l'application Jibi",
     intro: 'Une application gratuite et facile à utiliser pour gérer vos dépenses personnelles de manière intelligente et efficace',
     cards: [
@@ -161,9 +174,45 @@ const languageLinks = [
 const JibiPage = ({ language = 'ar' }) => {
   const content = contentByLanguage[language] ?? contentByLanguage.ar;
   const isRtl = content.dir === 'rtl';
+  const currentPath =
+    language === 'ar' ? '/jibi' : `/jibi/${language}`;
+  const structuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'SoftwareApplication',
+    name: 'Jibi Expense Tracker',
+    applicationCategory: 'FinanceApplication',
+    operatingSystem: 'Android',
+    inLanguage: language,
+    url: `${Seo.siteUrl}${currentPath}`,
+    image: `${Seo.siteUrl}/images/logo_jibi_app.png`,
+    description: content.seoDescription,
+    offers: {
+      '@type': 'Offer',
+      price: '0',
+      priceCurrency: 'USD',
+    },
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#667eea] to-[#764ba2] font-sans text-[#333] py-10" dir={content.dir}>
+      <Seo
+        title={content.seoTitle}
+        description={content.seoDescription}
+        path={currentPath}
+        lang={language}
+        dir={content.dir}
+        image="/images/logo_jibi_app.png"
+        type="website"
+        keywords="Jibi, Expense Tracker, budget app, تطبيق جيبي, إدارة المصروفات, gastos personales, gestion des dépenses"
+        structuredData={structuredData}
+        alternates={[
+          { hrefLang: 'ar', path: '/jibi' },
+          { hrefLang: 'en', path: '/jibi/en' },
+          { hrefLang: 'es', path: '/jibi/es' },
+          { hrefLang: 'fr', path: '/jibi/fr' },
+          { hrefLang: 'x-default', path: '/jibi' },
+        ]}
+      />
       <div className="max-w-6xl mx-auto px-5">
         <div className="text-center text-white mb-10">
           <img
@@ -203,7 +252,7 @@ const JibiPage = ({ language = 'ar' }) => {
             className="absolute top-5 left-5 inline-flex h-14 w-14 items-center justify-center rounded-full border-2 border-[#4f66f0] bg-white text-[#4f66f0] shadow-md hover:bg-[#4f66f0] hover:text-white transition-colors duration-300"
           >
             <svg
-              className="h-7 w-7"
+              className="h-7 w-7 -translate-x-px"
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"

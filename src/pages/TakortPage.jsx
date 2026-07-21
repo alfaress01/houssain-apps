@@ -1,6 +1,8 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import Seo from '../components/Seo';
 
 const featureCards = [
   {
@@ -38,6 +40,38 @@ const featureCards = [
 const TakortPage = () => {
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 flex flex-col font-sans" dir="rtl">
+      <Seo
+        title="Takort | منصة توقعات ومحاكاة كأس العالم 2026"
+        description="تعرف على منصة Takort الذكية لتوقعات ومحاكاة كأس العالم 2026، مع تحليلات AI، لعبة سابق العالم، ولوحة شرف عالمية."
+        path="/takort"
+        lang="ar"
+        dir="rtl"
+        image="/images/takort_logo.png"
+        type="article"
+        keywords="Takort, كأس العالم 2026, محاكاة المباريات, توقعات كرة القدم, Gemini API"
+        structuredData={{
+          '@context': 'https://schema.org',
+          '@type': 'Article',
+          headline: 'المنصة الذكية الأولى لتوقعات ومحاكاة كأس العالم 2026',
+          description:
+            'مقال تعريفي بمنصة Takort التي تجمع بين محاكاة المباريات بالذكاء الاصطناعي، الأخبار، والمسابقات التفاعلية.',
+          inLanguage: 'ar',
+          url: `${Seo.siteUrl}/takort`,
+          image: `${Seo.siteUrl}/images/takort_logo.png`,
+          author: {
+            '@type': 'Person',
+            name: 'Houssain',
+          },
+          publisher: {
+            '@type': 'Organization',
+            name: 'Houssain Apps',
+            logo: {
+              '@type': 'ImageObject',
+              url: `${Seo.siteUrl}/logo.png`,
+            },
+          },
+        }}
+      />
       <Header />
 
       <main className="flex-grow">
@@ -62,7 +96,26 @@ const TakortPage = () => {
 
         <section className="py-14">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="bg-white dark:bg-gray-800 rounded-3xl shadow-xl p-8 md:p-12 border border-gray-100 dark:border-gray-700">
+            <div className="bg-white dark:bg-gray-800 rounded-3xl shadow-xl p-8 md:p-12 border border-gray-100 dark:border-gray-700 relative">
+              <Link
+                to="/"
+                aria-label="العودة إلى الصفحة الرئيسية"
+                className="absolute top-5 left-5 inline-flex h-14 w-14 items-center justify-center rounded-full border-2 border-[#4f66f0] bg-white text-[#4f66f0] shadow-md transition-colors duration-300 hover:bg-[#4f66f0] hover:text-white"
+              >
+                <svg
+                  className="h-7 w-7 -translate-x-px"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2.8"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="M15 18l-6-6 6-6" />
+                  <path d="M9 12h10" />
+                </svg>
+              </Link>
               <div className="space-y-8 text-gray-700 dark:text-gray-200 leading-8 text-lg">
                 <div>
                   <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">ما هو موقع تاكورت؟</h2>

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Seo from '../components/Seo';
 
 const JibiPrivacy = () => {
   const scrollToSection = (id) => {
@@ -11,7 +12,45 @@ const JibiPrivacy = () => {
 
   return (
     <div className="min-h-screen bg-gray-50 py-10 font-sans text-gray-800">
-      <div className="max-w-4xl mx-auto bg-white p-8 rounded-lg shadow-lg">
+      <Seo
+        title="سياسة الخصوصية | تطبيق جيبي"
+        description="اقرأ سياسة الخصوصية الخاصة بتطبيق جيبي بأربع لغات: العربية والإنجليزية والإسبانية والفرنسية."
+        path="/jibi/privacy"
+        lang="ar"
+        dir="rtl"
+        image="/images/logo_jibi_app.png"
+        type="article"
+        keywords="سياسة الخصوصية, تطبيق جيبي, Jibi privacy policy"
+        structuredData={{
+          '@context': 'https://schema.org',
+          '@type': 'WebPage',
+          name: 'سياسة الخصوصية - تطبيق جيبي',
+          url: `${Seo.siteUrl}/jibi/privacy`,
+          inLanguage: ['ar', 'en', 'es', 'fr'],
+          description:
+            'سياسة الخصوصية الخاصة بتطبيق جيبي ومتاحة بالعربية والإنجليزية والإسبانية والفرنسية.',
+        }}
+      />
+      <div className="max-w-4xl mx-auto bg-white p-8 rounded-lg shadow-lg relative">
+        <Link
+          to="/"
+          aria-label="العودة إلى الصفحة الرئيسية"
+          className="absolute top-5 left-5 inline-flex h-14 w-14 items-center justify-center rounded-full border-2 border-[#4f66f0] bg-white text-[#4f66f0] shadow-md transition-colors duration-300 hover:bg-[#4f66f0] hover:text-white"
+        >
+          <svg
+            className="h-7 w-7 -translate-x-px"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2.8"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            aria-hidden="true"
+          >
+            <path d="M15 18l-6-6 6-6" />
+            <path d="M9 12h10" />
+          </svg>
+        </Link>
         {/* Header and Navigation */}
         <div className="bg-blue-600 text-white p-4 rounded-lg text-center mb-6">
           <p className="font-bold mb-2">📋 This privacy policy is available in four languages: English, Spanish, Arabic, and French</p>
