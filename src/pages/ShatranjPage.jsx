@@ -77,7 +77,26 @@ const ShatranjPage = () => {
             </p>
           </section>
 
-          <section className="bg-white dark:bg-gray-800 rounded-3xl shadow-xl p-8 md:p-12 border border-gray-100 dark:border-gray-700 mb-10">
+          <section className="bg-white dark:bg-gray-800 rounded-3xl shadow-xl p-8 md:p-12 border border-gray-100 dark:border-gray-700 mb-10 relative">
+            <Link
+              to="/"
+              aria-label="العودة إلى الصفحة الرئيسية"
+              className="absolute top-5 left-5 inline-flex h-14 w-14 items-center justify-center rounded-full border-2 border-[#4f66f0] bg-white text-[#4f66f0] shadow-md transition-colors duration-300 hover:bg-[#4f66f0] hover:text-white"
+            >
+              <svg
+                className="h-7 w-7 -translate-x-px"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2.8"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M15 18l-6-6 6-6" />
+                <path d="M9 12h10" />
+              </svg>
+            </Link>
             <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">ماذا يقدم الموقع؟</h2>
             <p className="text-lg leading-8 text-gray-700 dark:text-gray-200 mb-8">
               بحسب أقسام الموقع الحالية، يوفّر <strong>shatranj.pro</strong> تجربة متكاملة تشمل
@@ -114,12 +133,6 @@ const ShatranjPage = () => {
               >
                 زيارة shatranj.pro
               </a>
-              <Link
-                to="/"
-                className="inline-flex items-center rounded-full bg-indigo-600 px-6 py-3 text-white font-bold hover:bg-indigo-700 transition-colors"
-              >
-                العودة إلى الصفحة الرئيسية
-              </Link>
             </div>
           </section>
         </div>
