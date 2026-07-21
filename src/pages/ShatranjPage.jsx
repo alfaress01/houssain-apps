@@ -117,13 +117,10 @@ const ShatranjPage = () => {
             </div>
           </section>
 
-          <section className="bg-white dark:bg-gray-800 rounded-3xl shadow-xl p-8 md:p-12 border border-gray-100 dark:border-gray-700">
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">زيارة الموقع</h2>
-            <p className="text-lg leading-8 text-gray-700 dark:text-gray-200 mb-8">
-              يمكنك الانتقال مباشرة إلى الموقع لاستكشاف أقسامه وتجربة اللعب والمحتوى الشطرنجي
-              المتاح داخله.
-            </p>
-
+          <section className="rounded-2xl bg-emerald-50 dark:bg-emerald-950/30 border border-emerald-100 dark:border-emerald-900 p-6 text-center">
+            <h2 className="text-2xl font-bold text-emerald-700 dark:text-emerald-300 mb-4">
+              رابط المنصة للتجربة
+            </h2>
             <div className="flex flex-wrap justify-center gap-4">
               <a
                 href="https://shatranj.pro"
