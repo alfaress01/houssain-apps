@@ -196,7 +196,15 @@ const JibiPage = ({ language = 'ar' }) => {
           <p className="text-xl opacity-90">{content.subtitle}</p>
         </div>
 
-        <div className="bg-white rounded-2xl p-10 shadow-2xl mb-8">
+        <div className="bg-white rounded-2xl p-10 shadow-2xl mb-8 relative">
+          <Link
+            to="/"
+            aria-label={content.homeLabel}
+            className="absolute top-5 left-5 inline-flex h-11 w-11 items-center justify-center rounded-full border border-[#667eea] text-[#667eea] hover:bg-[#667eea] hover:text-white transition-colors duration-300"
+          >
+            ←
+          </Link>
+
           <h2 className="text-center text-[#667eea] text-2xl font-bold mb-8">{content.pageTitle}</h2>
 
           <p className="text-center text-lg mb-8">{content.intro}</p>
@@ -242,12 +250,6 @@ const JibiPage = ({ language = 'ar' }) => {
               >
                 {content.googlePlayLabel}
               </a>
-              <Link
-                to="/"
-                className="inline-block bg-white text-[#667eea] px-8 py-4 rounded-full text-lg font-bold border border-[#667eea] hover:-translate-y-1 transition-transform duration-300"
-              >
-                {content.homeLabel}
-              </Link>
             </div>
           </div>
 
