@@ -76,18 +76,18 @@ const TakortPage = () => {
 
       <main className="flex-grow py-14">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <section className="bg-gradient-to-r from-emerald-600 to-blue-700 text-white rounded-3xl p-8 md:p-12 shadow-xl mb-10">
-            <div className="mx-auto mb-6 flex h-24 w-24 items-center justify-center rounded-3xl bg-white/15 shadow-xl backdrop-blur-sm overflow-hidden">
+          <section className="bg-gradient-to-r from-emerald-600 to-blue-700 text-white rounded-3xl px-8 py-9 md:px-12 md:py-10 shadow-xl mb-10">
+            <div className="mx-auto mb-5 flex h-24 w-24 items-center justify-center rounded-3xl bg-white/15 shadow-xl backdrop-blur-sm overflow-hidden">
               <img
                 src={`${import.meta.env.BASE_URL}images/takort_logo.png`}
                 alt="Takort Logo"
                 className="h-full w-full object-cover"
               />
             </div>
-            <h1 className="text-4xl md:text-5xl font-extrabold leading-tight mb-5 text-center">
+            <h1 className="mx-auto mb-4 max-w-5xl text-center text-3xl font-extrabold leading-[1.3] md:text-[2.9rem]">
               المنصة الذكية الأولى لتوقعات ومحاكاة كأس العالم 2026
             </h1>
-            <p className="max-w-4xl mx-auto text-lg md:text-xl text-blue-100 leading-relaxed text-center">
+            <p className="mx-auto max-w-4xl text-center text-base leading-8 text-blue-100 md:text-lg">
               تاكورت منصة تفاعلية حديثة تمنح عشاق كرة القدم تجربة مختلفة تجمع بين التحليل الذكي،
               المحاكاة، التحديات، والأخبار المتجددة في مكان واحد.
             </p>
