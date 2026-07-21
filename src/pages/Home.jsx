@@ -26,27 +26,6 @@ function Home() {
       description: "أكثر من 50 أداة مجانية لتسهيل المهام اليومية والمهنية في مكان واحد.",
       icon: <img src={`${import.meta.env.BASE_URL}images/tayssir_logo.png`} alt="Tayssir Logo" className="w-full h-full object-cover" />,
       link: "/tayssir"
-    },
-    {
-      id: 4,
-      title: "مدير المهام",
-      description: "نظم وقتك ومهامك بفعالية مع تطبيق إدارة المهام المتطور.",
-      icon: "✅",
-      link: "#"
-    },
-    {
-      id: 5,
-      title: "حاسبة العملات",
-      description: "تحويل سريع ودقيق بين العملات العالمية بأسعار لحظية.",
-      icon: "💱",
-      link: "#"
-    },
-    {
-      id: 6,
-      title: "قارئ الأخبار",
-      description: "تابع آخر الأخبار من مصادرك المفضلة في مكان واحد.",
-      icon: "📰",
-      link: "#"
     }
   ];
 
