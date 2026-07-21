@@ -11,7 +11,10 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/jibi" element={<JibiPage />} />
+        <Route path="/jibi" element={<JibiPage language="ar" />} />
+        <Route path="/jibi/en" element={<JibiPage language="en" />} />
+        <Route path="/jibi/es" element={<JibiPage language="es" />} />
+        <Route path="/jibi/fr" element={<JibiPage language="fr" />} />
         <Route path="/jibi/privacy" element={<JibiPrivacy />} />
         <Route path="/takort" element={<TakortPage />} />
         <Route path="/tayssir" element={<TayssirPage />} />
