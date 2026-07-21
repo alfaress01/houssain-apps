@@ -23,8 +23,8 @@ const Header = () => {
           <nav className="hidden md:flex space-x-8">
             <Link to="/" className="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 px-3 py-2 rounded-md text-sm font-medium">الرئيسية</Link>
             <a href={sectionLink('apps')} className="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 px-3 py-2 rounded-md text-sm font-medium">التطبيقات</a>
-            <a href={sectionLink('about')} className="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 px-3 py-2 rounded-md text-sm font-medium">من نحن</a>
-            <a href={sectionLink('contact')} className="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 px-3 py-2 rounded-md text-sm font-medium">اتصل بنا</a>
+            <Link to="/about" className="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 px-3 py-2 rounded-md text-sm font-medium">من نحن</Link>
+            <Link to="/contact" className="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 px-3 py-2 rounded-md text-sm font-medium">اتصل بنا</Link>
           </nav>
 
           {/* Mobile Menu Button */}
@@ -63,20 +63,20 @@ const Header = () => {
             >
               التطبيقات
             </a>
-            <a 
-              href={sectionLink('about')} 
+            <Link 
+              to="/about" 
               className="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 block px-3 py-2 rounded-md text-base font-medium"
               onClick={() => setIsMenuOpen(false)}
             >
               من نحن
-            </a>
-            <a 
-              href={sectionLink('contact')} 
+            </Link>
+            <Link 
+              to="/contact" 
               className="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 block px-3 py-2 rounded-md text-base font-medium"
               onClick={() => setIsMenuOpen(false)}
             >
               اتصل بنا
-            </a>
+            </Link>
           </div>
         </div>
       )}
