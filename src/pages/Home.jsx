@@ -78,23 +78,24 @@ function Home() {
       
       <main className="flex-grow">
         {/* Hero Section */}
-        <section className="bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-12 relative overflow-hidden">
-          <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
-            <div className="absolute top-10 left-10 w-20 h-20 bg-white rounded-full blur-xl"></div>
-            <div className="absolute bottom-20 right-20 w-32 h-32 bg-white rounded-full blur-xl"></div>
-            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-white rounded-full blur-3xl opacity-20"></div>
-          </div>
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-            <h1 className="text-5xl md:text-7xl font-extrabold mb-6 tracking-tight drop-shadow-md text-white">
-              أهلاً بك في معرض تطبيقات حسين
-            </h1>
-            <p className="text-xl md:text-3xl text-blue-100 max-w-3xl mx-auto font-light leading-relaxed mb-10">
-              نقدم لك أفضل التطبيقات التي تساعدك في حياتك اليومية والعملية.
-              تصفح مجموعتنا المختارة من الأدوات المفيدة.
-            </p>
-            <a href="#apps" className="inline-block bg-white text-blue-600 font-bold py-4 px-10 rounded-full shadow-xl hover:bg-gray-50 hover:scale-105 transition-all duration-300 text-lg">
-              تصفح التطبيقات
-            </a>
+        <section className="py-14">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-blue-600 to-indigo-700 px-8 py-10 text-center text-white shadow-xl md:px-12 md:py-12">
+              <div className="pointer-events-none absolute inset-0 opacity-10">
+                <div className="absolute top-10 left-10 h-20 w-20 rounded-full bg-white blur-xl"></div>
+                <div className="absolute bottom-16 right-16 h-28 w-28 rounded-full bg-white blur-xl"></div>
+                <div className="absolute left-1/2 top-1/2 h-72 w-72 -translate-x-1/2 -translate-y-1/2 rounded-full bg-white blur-3xl opacity-20"></div>
+              </div>
+              <div className="relative z-10 mx-auto max-w-4xl">
+                <h1 className="mb-5 text-center text-4xl font-extrabold leading-[1.3] text-white md:text-[3.4rem]">
+                  أهلاً بك في معرض تطبيقات حسين
+                </h1>
+                <p className="mx-auto max-w-3xl text-center text-lg leading-8 text-blue-100 md:text-2xl">
+                  نقدم لك أفضل التطبيقات التي تساعدك في حياتك اليومية والعملية. تصفح مجموعتنا
+                  المختارة من الأدوات المفيدة.
+                </p>
+              </div>
+            </div>
           </div>
         </section>
 
